@@ -1,0 +1,35 @@
+#include <stdio.h>
+struct list 
+{
+    char name[10];
+    int downlink[3];
+    int downlinkfrequency[3];
+    int uplink[3];
+    int uplinkfrequency[3];
+};
+
+struct list list1[]={
+
+    {"2100",{2110,2140,2170},{0,300,599},{1920,1950,1980},{18000,18300,18500}}
+};    
+int main()
+{
+    int i;
+
+    printf("pls input the band\n"); 
+    scanf("%d",&i);
+
+    if (i==1)
+    {
+        printf("name:%s\n",list1[0].name);
+        printf("downlink:%d,%d,%d\n",list1[0].downlink[0],list1[0].downlink[1],list1[0].downlink[2]);
+        printf("downlinkfrequency:%d,%d,%d\n",list1[0].downlinkfrequency[0],list1[0].downlinkfrequency[1],list1[0].downlinkfrequency[2]);
+        printf("uplink:%d,%d,%d\n",list1[0].uplink[0],list1[0].uplink[1],list1[0].uplink[2]);
+        printf("uplinkfrequency:%d,%d,%d\n",list1[0].uplinkfrequency[0],list1[0].uplinkfrequency[1],list1[0].uplinkfrequency[2]);
+    }
+    else
+    {   
+        printf("error\n");
+    }
+    return 0;
+}
